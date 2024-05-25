@@ -13,17 +13,17 @@ class Body{
     std::string name;
 
     // The mass of the body
-    int mass;
+    double mass;
 
     // the position of the body in three dimensions
-    int x, y, z;
+    float x, y, z;
 
     // The velocity of the body in three dimensions
-    int vx, vy, vz;
+    float vx, vy, vz;
 
     public:
         // The constructor for the body class
-        Body(std::string name, int mass, int x, int y, int z, int vx, int vy, int vz);
+        Body(std::string name, double mass, float x, float y, float z, float vx, float vy, float vz);
 
         // // Get functions
         // std::string getName();

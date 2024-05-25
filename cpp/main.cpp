@@ -21,33 +21,21 @@ int main(){
     
 
     // Begin by creating a singular body, from the body class
-    Body body1("Earth", 3e-6, 0, 0, 0, 0, 0, 0);
+    //Body body1("Earth", 3e-6, 0, 0, 0, 0, 0, 0);
 
     // Print the body
-    body1.print();
+    //body1.print();
 
 
-    // Create a vector of bodies
-    vector<Body> bodies;
+    // Try the same body creation but with the Earth class
+    Earth earth(0, 0, 0, 0, 0, 0);
+    earth.print();
 
-    // Add the earth to the vector
-    bodies.push_back(body1);
-
-
-    std::cout << "\n\n" << std::endl;
+    // Print the secret sauce
+    cout << "The Secret Sauce is: " << earth.get_secret_sauce() << endl;
 
 
-    // Create a second body
-    Body body2("Mars", 3e-6, 0, 0, 0, 0, 0, 0);
-
-    // Print the second body
-    body2.print();
-
-    // Add the second body to the vector
-    bodies.push_back(body2);
-
-
-    cout << endl;
+    return 0;
 }
 
 
