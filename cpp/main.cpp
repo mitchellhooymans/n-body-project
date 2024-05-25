@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
-#include "body.cpp"
+#include "simulation.cpp"
 
 using namespace std;
 
@@ -20,20 +20,11 @@ using namespace std;
 int main(){
     
 
-    // Begin by creating a singular body, from the body class
-    //Body body1("Earth", 3e-6, 0, 0, 0, 0, 0, 0);
+    cout << "Initalizing Simulation" << endl;
+    simulation sim;
+    cout << "Simulation Complete" << endl;
 
-    // Print the body
-    //body1.print();
-
-
-    // Try the same body creation but with the Earth class
-    Earth earth(0, 0, 0, 0, 0, 0);
-    earth.print();
-
-    // Print the secret sauce
-    cout << "The Secret Sauce is: " << earth.get_secret_sauce() << endl;
-
+    
 
     return 0;
 }

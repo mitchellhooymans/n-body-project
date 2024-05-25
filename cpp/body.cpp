@@ -40,7 +40,7 @@ class Earth: public Body{
         int secret_sauce = 42;
     public:
         // The constructor for the earth class, which uses the body class constructor
-        Earth(float x, float y, float z, float vx, float vy, float vz): Body("Earth", 456.0, x, y, z, vx, vy, vz){
+        Earth(float x, float y, float z, float vx, float vy, float vz): Body("Earth", 3e-6, x, y, z, vx, vy, vz){
             std::cout << "An Earth has been created" << std::endl;
         }
         // Print function for the earth class
