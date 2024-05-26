@@ -17,18 +17,42 @@ public:
 simulation::simulation(/* args */)
 
 {
-    //Begin by creating a singular body, from the body class
-    Body body1("Earth", 3e-6, 0, 0, 0, 0, 0, 0);
 
-    // Print the body
-    body1.print();
+    // Create a vector of bodies, using the body class
+    std::vector<Body> bodies;
+
+    // 
 
 
-    for(int i = 0; i < 10; i++){
-        std::cout << "Creating new earth: " << i << std::endl;
-        Earth earth(0, 0, 0, 0, 0, 0);
-        earth.print();
-    }
+    // Create inital conditions for the bodies
+    double b1_x = 1;
+    double b1_y = 0;
+    double b1_vx = 0;
+    double b1_vy = 0;
+    double b1_z = 0;
+    double b1_mass = 3e-6;
+    double b1_vz = 0;
+
+    double b2_x = 0;
+    double b2_y = 0;
+    double b2_vx = 0;
+    double b2_vy = 0;
+    double b2_z = 0;
+    double b2_mass = 1;
+    double b2_vz = 0;
+
+
+    // Create the bodies
+
+    // Earth
+    Body earth = Body("Earth", 3e-6, b1_x, b1_y, b1_z, b1_vx, b1_vy, b1_vz);
+    
+    // Sun
+    Body sun = Body("Sun", 1, b2_x, b2_y, b2_z, b2_vx, b2_vy, b2_vz);
+
+    // Add the bodies to the vector
+    bodies.push_back(earth);
+    bodies.push_back(sun);
 
 
 }
