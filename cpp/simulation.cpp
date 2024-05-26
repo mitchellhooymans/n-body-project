@@ -18,11 +18,14 @@ simulation::simulation(/* args */)
 
 {
 
-    // Create a vector of bodies, using the body class
-    std::vector<Body> bodies;
-
-    // 
-
+    // Simulation parameters and constants
+    double G = 6.67430e-11; // Gravitational constant
+    double M_sol = 1.98e30; // Solar mass in kg
+    double AU = 1.496e11;   // Astronomical unit in meters
+    double dt = 0.1;        // Time step
+    double t = 0;           // Initial time
+    double t_end = 100;     // End time
+    double N = t_end / dt;  // Number of time steps
 
     // Create inital conditions for the bodies
     double b1_x = 1;
@@ -42,8 +45,11 @@ simulation::simulation(/* args */)
     double b2_vz = 0;
 
 
-    // Create the bodies
+    
+    // Create a vector of bodies, using the body class
+    std::vector<Body> bodies;
 
+    // Create the bodies
     // Earth
     Body earth = Body("Earth", 3e-6, b1_x, b1_y, b1_z, b1_vx, b1_vy, b1_vz);
     
@@ -53,6 +59,13 @@ simulation::simulation(/* args */)
     // Add the bodies to the vector
     bodies.push_back(earth);
     bodies.push_back(sun);
+
+    // Run the simulation
+    for (int i = 0; i < N; i++)
+    {
+       
+    };
+
 
 
 }
